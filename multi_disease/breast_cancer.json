@@ -1,0 +1,134 @@
+{
+  "disease": "breast cancer",
+  "expected_gene": "BRCA1",
+  "top_genes": [
+    {
+      "gene_symbol": "BRCA2",
+      "gene_name": "BRCA2 DNA repair associated",
+      "association_score": 0.9251085451993997
+    },
+    {
+      "gene_symbol": "BRCA1",
+      "gene_name": "BRCA1 DNA repair associated",
+      "association_score": 0.9194443258299257
+    },
+    {
+      "gene_symbol": "CHEK2",
+      "gene_name": "checkpoint kinase 2",
+      "association_score": 0.883711182935059
+    },
+    {
+      "gene_symbol": "PALB2",
+      "gene_name": "partner and localizer of BRCA2",
+      "association_score": 0.8830551393973749
+    },
+    {
+      "gene_symbol": "PIK3CA",
+      "gene_name": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+      "association_score": 0.8776045843448664
+    }
+  ],
+  "guides": [
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "AATATCTGGAACTTCTCCAG",
+      "position": 1659,
+      "pam": "TGG",
+      "seq30": "AGGCAATATCTGGAACTTCTCCAGTGGCTT",
+      "xgb_score": 0.8162,
+      "position_pct": 13.94
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "CATTTTCAAGAACTCTACCA",
+      "position": 2958,
+      "pam": "TGG",
+      "seq30": "AACCCATTTTCAAGAACTCTACCATGGTTT",
+      "xgb_score": 0.7896,
+      "position_pct": 24.85
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "CCTGCATTTAGGATAGCCAG",
+      "position": 5722,
+      "pam": "TGG",
+      "seq30": "GCCACCTGCATTTAGGATAGCCAGTGGTAA",
+      "xgb_score": 0.7868,
+      "position_pct": 48.07
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "CAAGGGATGTCACAACCGTG",
+      "position": 9086,
+      "pam": "TGG",
+      "seq30": "TTATCAAGGGATGTCACAACCGTGTGGAAG",
+      "xgb_score": 0.786,
+      "position_pct": 76.33
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "AAAGAGCATACCCTATACAG",
+      "position": 8666,
+      "pam": "TGG",
+      "seq30": "ATTCAAAGAGCATACCCTATACAGTGGATG",
+      "xgb_score": 0.7821,
+      "position_pct": 72.81
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "AAAGACCCTAAAGTACAGAG",
+      "position": 4890,
+      "pam": "AGG",
+      "seq30": "GGGCAAAGACCCTAAAGTACAGAGAGGCCT",
+      "xgb_score": 0.7526,
+      "position_pct": 41.08
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "ACATCTTTGGCTGAGCTCGG",
+      "position": 10645,
+      "pam": "TGG",
+      "seq30": "AAAAACATCTTTGGCTGAGCTCGGTGGCTC",
+      "xgb_score": 0.7474,
+      "position_pct": 89.43
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "TCTCTGTCATGCCTGCAGGA",
+      "position": 2320,
+      "pam": "AGG",
+      "seq30": "TGATTCTCTGTCATGCCTGCAGGAAGGACA",
+      "xgb_score": 0.7434,
+      "position_pct": 19.49
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "TAACAGATGAAAATGAAGTG",
+      "position": 3821,
+      "pam": "GGG",
+      "seq30": "TATTTAACAGATGAAAATGAAGTGGGGTTT",
+      "xgb_score": 0.7331,
+      "position_pct": 32.1
+    },
+    {
+      "gene": "BRCA2",
+      "guide_sequence": "TGGAAGTGACAAAATCTCCA",
+      "position": 1332,
+      "pam": "AGG",
+      "seq30": "AGAGTGGAAGTGACAAAATCTCCAAGGAAG",
+      "xgb_score": 0.7215,
+      "position_pct": 11.19
+    }
+  ],
+  "query": "I am designing a CRISPR-Cas9 experiment to treat breast cancer. What genes would you target and why? For each gene, suggest a guide RNA sequence (20nt, NGG PAM) and explain what makes it likely to be efficient.",
+  "baseline_response": "Designing a CRISPR-Cas9 experiment for treating breast cancer involves targeting genes that are crucial for tumor development, progression, or maintenance. Some key targets include:\n\n1. **HER2 (Human Epidermal Growth Factor Receptor 2)**: Overexpression of HER2 is a hallmark of aggressive breast cancers, particularly those classified as HER2-positive. Targeting this receptor can help reduce tumor growth.\n\n2. **BRCA1/BRCA2**: These genes are involved in DNA repair mechanisms. Mutations in BRCA1 and BRCA2 are known to increase the risk of breast cancer. Knocking out these genes could potentially inhibit tumor growth by disrupting DNA repair processes.\n\n3. **CD44**: This gene is often overexpressed in breast cancer cells and is associated with stem cell-like properties and resistance to therapy.\n\n4. **ERBB2 (EGFR)**: This is another receptor tyrosine kinase that is frequently amplified in breast cancer, contributing to cell proliferation and survival.\n\n5. **MYC**: This gene is often overexpressed in many types of breast cancer and plays a critical role in cell proliferation and apoptosis inhibition.\n\n### Guide RNA Sequences\n\nFor each gene, I will provide a guide RNA sequence along with an explanation of why it is likely to be efficient:\n\n#### 1. **HER2**\n- **Guide RNA Sequence**: `CTGGTGGTGAGTTTGTCTCT`\n- **Explanation**: This sequence is designed to target a region within the coding sequence of HER2. It avoids potential off-target sites by ensuring a high specificity score using tools like CHOPCHOP or CRISPR-esso. The PAM sequence (`NGG`) is correctly placed to ensure Cas9 cleavage.\n\n#### 2. **BRCA1**\n- **Guide RNA Sequence**: `CGTCTGACCTGTCCCTGAGA`\n- **Explanation**: This sequence targets a region in the BRCA1 coding sequence. It is chosen to avoid regions with high GC content or repetitive sequences which can affect cleavage efficiency. The sequence is also checked for potential secondary structures that might interfere with Cas9 binding.\n\n#### 3. **BRCA2**\n- **Guide RNA Sequence**: `CTGGAGTGTGGTGAGAGCTT`\n- **Explanation**: This sequence targets a region in the BRCA2 coding sequence. Similar to BRCA1, it is chosen to minimize off-target effects and ensure optimal cleavage efficiency. The sequence is analyzed for potential structural issues and validated for specificity.\n\n#### 4. **CD44**\n- **Guide RNA Sequence**: `CTGGTGGTGAGTTTGTCTCT`\n- **Explanation**: This sequence targets a region in the CD44 coding sequence. It is designed to be specific and avoid non-coding regions or repetitive elements. The sequence is also checked for potential secondary structures.\n\n#### 5. **ERBB2**\n- **",
+  "rag_response": "For a CRISPR-Cas9 experiment targeting breast cancer, the primary focus should be on genes involved in DNA repair mechanisms, as these are critical for maintaining genomic stability and can be exploited for therapeutic purposes. Based on the provided context, the top two genes to target are BRCA2 and BRCA1, given their high association scores with breast cancer.\n\n### Targeting BRCA2:\n**Guide RNA Sequence:** AATATCTGGAACTTCTCCAG\n- **Position:** 1659 (13.94%)\n- **PAM:** TGG\n- **Efficiency Score:** 0.8162\n\n**Rationale:** \n- **High Association Score:** BRCA2 has an association score of 0.9251085451993997, indicating a strong link to breast cancer.\n- **High Efficiency Score:** The guide RNA with the highest efficiency score (0.8162) is selected for targeting BRCA2. This score indicates a high likelihood of successful Cas9 cleavage at the target site.\n\n### Targeting BRCA1:\n**Guide RNA Sequence:** CATTTTCAAGAACTCTACCA\n- **Position:** 2958 (24.85%)\n- **PAM:** TGG\n- **Efficiency Score:** 0.7896\n\n**Rationale:** \n- **High Association Score:** BRCA1 has an association score of 0.9194443258299257, which is very close to BRCA2, indicating a strong link to breast cancer.\n- **Efficiency Score:** Although the efficiency score is slightly lower than the top-scoring guide for BRCA2, it still ranks highly and is expected to be effective.\n\n### Additional Considerations:\n- **CHEK2:** While CHEK2 has a high association score (0.883711182935059), there are no specific guide RNA sequences provided for this gene in the ML pipeline. Further investigation may be needed to find suitable guide RNAs for CHEK2.\n- **PALB2:** Similarly, while PALB2 has a high association score (0.8830551393973749), no specific guide RNA sequences are provided in the ML pipeline. Additional research could be conducted to identify effective guide RNAs for this gene.\n\nBy targeting BRCA2 and BRCA1 with the recommended guide RNAs, you can effectively disrupt key components of the DNA repair machinery, potentially leading to cell death and inhibition of breast cancer progression.",
+  "retrieved_chunks": [
+    "Title: Genetic advancements in breast cancer treatment: a review.\nAbstract: Breast cancer (BC) remains a leading cause of cancer-related deaths among women globally, highlighting the urgent need for more effective and targeted therapies. Traditional treatments, including surgery, chemotherapy, and radiation, face limitations such as drug resistance, metastasis, and severe side effects. Recent advancements in gene therapy, particularly CRISPR/Cas9 technology and Oncolytic ",
+    "Title: Breast Cancer Transcriptional Regulatory Network Reprogramming by using the CRISPR/Cas9 System: An Oncogenetics Perspective.\nAbstract: Breast cancer (BC) is the second most commonly diagnosed cancer in the world. BC develops due to dysregulation of transcriptional profiles, substantial interpatient variations, genetic mutations, and dysregulation of signaling pathways in breast cells. These events are regulated by many genes such as BRCA1/2, PTEN, TP53, mTOR, TERT, AKT, PI3K and others genes. Treatment options for BC remain a hur",
+    "Title: Identification of pathogenic variants in cancer genes using base editing screens with editing efficiency correction.\nAbstract: BACKGROUND: Millions of nucleotide variants are identified through cancer genome sequencing and it is clinically important to identify the pathogenic variants among them. By introducing base substitutions at guide RNA target regions in the genome, CRISPR-Cas9-based base editors provide the possibility for evaluating a large number of variants in their genomic context. However, the variability in e",
+    "Title: Precision screening facilitates clinical classification of BRCA2-PALB2 binding variants with benign and pathogenic functional effects.\nAbstract: BACKGROUNDDecoding the clinical impact of genetic variants is particularly important for precision medicine in cancer. Genetic screening of mainly patients with breast and ovarian cancer has identified numerous BRCA1/BRCA2 variants of uncertain significance (VUS) that remain unclassified owing to a lack of pedigrees and functional data.METHODSHere, we used CRISPR-Select - a technology that exploit",
+    "Title: G6PC3 promotes genome maintenance and is a candidate mammary tumor suppressor.\nAbstract: Mutations in genome maintenance factors drive sporadic and hereditary breast cancers. Here, we searched for potential drivers based on germline DNA analysis from a cohort consisting of patients with early-onset breast cancer negative for BRCA1/BRCA2 mutations. This revealed candidate genes that subsequently were subjected to RNA interference-based (RNAi-based) phenotype screens to reveal genome in",
+    "Title: MND1 and PSMC3IP control PARP inhibitor sensitivity in mitotic cells.\nAbstract: The PSMC3IP-MND1 heterodimer promotes meiotic D loop formation before DNA strand exchange. In genome-scale CRISPR-Cas9 mutagenesis and interference screens in mitotic cells, depletion of PSMC3IP or MND1 causes sensitivity to poly (ADP-Ribose) polymerase inhibitors (PARPi) used in cancer treatment. PSMC3IP or MND1 depletion also causes ionizing radiation sensitivity. These effects are independent o"
+  ]
+}

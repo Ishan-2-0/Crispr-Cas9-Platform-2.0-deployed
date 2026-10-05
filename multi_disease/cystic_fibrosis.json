@@ -1,0 +1,134 @@
+{
+  "disease": "cystic fibrosis",
+  "expected_gene": "CFTR",
+  "top_genes": [
+    {
+      "gene_symbol": "CFTR",
+      "gene_name": "CF transmembrane conductance regulator",
+      "association_score": 0.9211437412666207
+    },
+    {
+      "gene_symbol": "RPS27A",
+      "gene_name": "ribosomal protein S27a",
+      "association_score": 0.5590034801739948
+    },
+    {
+      "gene_symbol": "RNF5",
+      "gene_name": "ring finger protein 5",
+      "association_score": 0.48084106753843
+    },
+    {
+      "gene_symbol": "UBC",
+      "gene_name": "ubiquitin C",
+      "association_score": 0.4664169115565105
+    },
+    {
+      "gene_symbol": "VCP",
+      "gene_name": "valosin containing protein",
+      "association_score": 0.464666605307334
+    }
+  ],
+  "guides": [
+    {
+      "gene": "CFTR",
+      "guide_sequence": "GAATGTAACAGCCTTCTGGG",
+      "position": 1254,
+      "pam": "AGG",
+      "seq30": "TGGAGAATGTAACAGCCTTCTGGGAGGAGG",
+      "xgb_score": 0.8703,
+      "position_pct": 20.66
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "GAGGGTAAAATTAAGCACAG",
+      "position": 1504,
+      "pam": "TGG",
+      "seq30": "TTCAGAGGGTAAAATTAAGCACAGTGGAAG",
+      "xgb_score": 0.8045,
+      "position_pct": 24.78
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "GCTGTTATAATCTTTCACAG",
+      "position": 5235,
+      "pam": "GGG",
+      "seq30": "AAGGGCTGTTATAATCTTTCACAGGGGACA",
+      "xgb_score": 0.7942,
+      "position_pct": 86.24
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "ATGACACACTCAGTTAACCA",
+      "position": 2386,
+      "pam": "AGG",
+      "seq30": "CCTGATGACACACTCAGTTAACCAAGGTCA",
+      "xgb_score": 0.7861,
+      "position_pct": 39.31
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "CCTAGGGTGATATTAACCAG",
+      "position": 5800,
+      "pam": "GGG",
+      "seq30": "AGAACCTAGGGTGATATTAACCAGGGGCCA",
+      "xgb_score": 0.7837,
+      "position_pct": 95.55
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "ATATCATGAGTACATTGCAG",
+      "position": 3482,
+      "pam": "TGG",
+      "seq30": "ATGAATATCATGAGTACATTGCAGTGGGCT",
+      "xgb_score": 0.7773,
+      "position_pct": 57.36
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "TCTCAATAAGTCCTGGCCAG",
+      "position": 3764,
+      "pam": "AGG",
+      "seq30": "TCCTTCTCAATAAGTCCTGGCCAGAGGGTG",
+      "xgb_score": 0.7692,
+      "position_pct": 62.01
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "CTATGACCCGGATAACAAGG",
+      "position": 393,
+      "pam": "AGG",
+      "seq30": "CTTCCTATGACCCGGATAACAAGGAGGAAC",
+      "xgb_score": 0.7691,
+      "position_pct": 6.47
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "ACTTGGATCCCTATGAACAG",
+      "position": 3977,
+      "pam": "TGG",
+      "seq30": "AAAAACTTGGATCCCTATGAACAGTGGAGT",
+      "xgb_score": 0.7579,
+      "position_pct": 65.52
+    },
+    {
+      "gene": "CFTR",
+      "guide_sequence": "GAAGGTGGAATCACACTGAG",
+      "position": 1696,
+      "pam": "TGG",
+      "seq30": "TGGAGAAGGTGGAATCACACTGAGTGGAGG",
+      "xgb_score": 0.732,
+      "position_pct": 27.94
+    }
+  ],
+  "query": "I am designing a CRISPR-Cas9 experiment to treat cystic fibrosis. What genes would you target and why? For each gene, suggest a guide RNA sequence (20nt, NGG PAM) and explain what makes it likely to be efficient.",
+  "baseline_response": "Cystic fibrosis is primarily caused by mutations in the *CFTR* (Cystic Fibrosis Transmembrane Conductance Regulator) gene. The *CFTR* gene encodes a protein that functions as a chloride channel, which is crucial for maintaining the balance of fluids and salts in the body. Mutations in this gene can lead to thick, sticky mucus that obstructs various organs, particularly the lungs and pancreas.\n\n### Targeting the CFTR Gene\n\nTo correct the genetic defect causing cystic fibrosis, one approach is to use CRISPR-Cas9 to introduce precise edits into the *CFTR* gene. This could involve:\n\n1. **Deletion of Mutated Sequences**: Removing the mutated sequence to restore the wild-type sequence.\n2. **Base Editing**: Directly converting a specific mutation to its normal form without creating a double-strand break (DSB).\n\nFor simplicity and efficiency, I will focus on targeting a common mutation in the *CFTR* gene, such as the ΔF508 mutation, which is the most frequent and severe mutation responsible for cystic fibrosis.\n\n### Guide RNA Design\n\n#### 1. Targeting the ΔF508 Mutation\n\n**Location**: The ΔF508 mutation involves a deletion of three nucleotides at position 1117 of the *CFTR* gene, resulting in an in-frame deletion of phenylalanine at position 508.\n\n**Guide RNA Sequence**: A guide RNA that targets the region just upstream of the deletion site can be designed to facilitate the correction of the deletion. Here’s an example:\n\n- **Guide RNA Sequence**: `AGCTTGGAGGTTCCCGTGTCA`\n\nThis guide RNA is designed to target the sequence `GCTTGGAGGTTCCCGTGTCAAG` in the *CFTR* gene, which is just upstream of the ΔF508 deletion site. The PAM sequence `NGG` is present immediately downstream of the guide RNA binding site.\n\n**Why This Sequence is Likely to Be Efficient**:\n- **Proximity to the Deletion Site**: The guide RNA is positioned close to the deletion site, allowing Cas9 to effectively make the necessary cut and promote homology-directed repair (HDR).\n- **Avoidance of Off-Target Sites**: By carefully selecting the guide RNA sequence, we minimize the likelihood of off-target effects. The specificity of the guide RNA is critical to ensure that only the intended region of the genome is targeted.\n- **Efficient HDR**: The proximity to the deletion site enhances the efficiency of HDR, which is essential for correcting the mutation.\n\n### Additional Considerations\n\n- **Delivery Method**: Efficient delivery of the CRISPR-Cas9 system is crucial. Viral vectors like adeno-associated viruses (AAVs) or lipid nanoparticles (LNPs) can be used to deliver the guide RNA and Cas9 into lung",
+  "rag_response": "For treating cystic fibrosis, targeting the CFTR gene is the primary approach given its central role in the disease. Based on the provided context and the ML pipeline data, here are the recommended guide RNA sequences for CFTR:\n\n1. **Guide RNA Sequence:** GAATGTAACAGCCTTCTGGG\n   - **Efficiency Score:** 0.8703\n   - **Position:** 1254 (20.66%)\n   - **PAM:** AGG\n   - **Rationale:** This guide RNA has the highest efficiency score among those designed for CFTR, indicating a strong likelihood of achieving effective gene editing.\n\n2. **Guide RNA Sequence:** GAGGGTAAAATTAAGCACAG\n   - **Efficiency Score:** 0.8045\n   - **Position:** 1504 (24.78%)\n   - **PAM:** TGG\n   - **Rationale:** Although slightly less efficient than the top choice, this guide RNA still has a high score and is positioned in a region that might be accessible for Cas9 binding and cleavage.\n\n3. **Guide RNA Sequence:** GCTGTTATAATCTTTCACAG\n   - **Efficiency Score:** 0.7942\n   - **Position:** 5235 (86.24%)\n   - **PAM:** GGG\n   - **Rationale:** This guide RNA is also highly ranked and positioned towards the end of the gene, which could be important for ensuring comprehensive coverage of the gene's coding sequence.\n\n4. **Guide RNA Sequence:** ATGACACACTCAGTTAACCA\n   - **Efficiency Score:** 0.7861\n   - **Position:** 2386 (39.31%)\n   - **PAM:** AGG\n   - **Rationale:** This guide RNA is another highly efficient option and is positioned in a central part of the gene, which could be beneficial for achieving consistent gene editing across different regions.\n\n### Additional Considerations:\n- **Targeting Other Genes:** While CFTR is the primary target, other genes like RPS27A, RNF5, UBC, and VCP may also play supportive roles in the disease pathology. However, based on the provided data, targeting these genes would be secondary to CFTR.\n- **Epigenetic Regulation:** The literature suggests that multiple intronic and distal regulatory elements are involved in CFTR expression. CRISPR-based epigenome editing could be considered to enhance or correct the expression of these regulatory elements.\n- **Base Editing:** Given the potential for adenine base editors (ABE) to correct nonsense mutations, this could be an additional strategy to consider alongside traditional CRISPR-Cas9 gene editing.\n\nBy focusing on the CFTR gene",
+  "retrieved_chunks": [
+    "Title: Innovative Therapeutic Strategies for Cystic Fibrosis: Moving Forward to CRISPR Technique.\nAbstract: One of the most revolutionary technologies in recent years in the field of molecular biology is CRISPR-Cas9. CRISPR technology is a promising tool for gene editing that provides researchers the opportunity to easily alter DNA sequences and modify gene function. Its many potential applications include correcting genetic defects, treating and preventing the spread of diseases. Cystic fibrosis (CF) i",
+    "Title: Epigenome editing of the CFTR-locus for treatment of cystic fibrosis.\nAbstract: BACKGROUND: Mechanisms governing the diversity of CFTR gene expression throughout the body are complex. Multiple intronic and distal regulatory elements are responsible for regulating differential CFTR expression across tissues. METHODS: Drawing on published data, 18 high-priority genomic regions were identified and interrogated for CFTR-enhancer function using CRISPR/dCas9-based epigenome editing",
+    "Title: Characterization of two rat models of cystic fibrosis-KO and F508del CFTR-Generated by Crispr-Cas9.\nAbstract: BACKGROUND: Genetically engineered animals are essential for gaining a proper understanding of the disease mechanisms of cystic fibrosis (CF). The rat is a relevant laboratory model for CF because of its zootechnical capacity, size, and airway characteristics, including the presence of submucosal glands. METHODS: We describe the generation of a CF rat model (F508del) homozygous for the p.Phe508del",
+    "Title: CRISPR-Based Adenine Editors Correct Nonsense Mutations in a Cystic Fibrosis Organoid Biobank.\nAbstract: Adenine base editing (ABE) enables enzymatic conversion from A-T into G-C base pairs. ABE holds promise for clinical application, as it does not depend on the introduction of double-strand breaks, contrary to conventional CRISPR/Cas9-mediated genome engineering. Here, we describe a cystic fibrosis (CF) intestinal organoid biobank, representing 664 patients, of which ~20% can theoretically be repai",
+    "Title: New approaches to genetic therapies for cystic fibrosis.\nAbstract: Gene therapy offers great promise for cystic fibrosis which has never been quite fulfilled due to the challenges of delivering sufficient amounts of the CFTR gene and expression persistence for a sufficient period of time in the lungs to have any effect. Initial trials explored both viral and non-viral vectors but failed to achieve a significant breakthrough. However, in recent years, new opportun",
+    "Title: Animal and model systems for studying cystic fibrosis.\nAbstract: The cystic fibrosis (CF) field is the beneficiary of five species of animal models that lack functional cystic fibrosis transmembrane conductance regulator (CFTR) channel. These models are rapidly informing mechanisms of disease pathogenesis and CFTR function regardless of how faithfully a given organ reproduces the human CF phenotype. New approaches of genetic engineering with RNA-guided nuclease"
+  ]
+}

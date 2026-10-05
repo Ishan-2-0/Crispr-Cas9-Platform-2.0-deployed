@@ -1,0 +1,134 @@
+{
+  "disease": "Huntington's disease",
+  "expected_gene": "HTT",
+  "top_genes": [
+    {
+      "gene_symbol": "HTT",
+      "gene_name": "huntingtin",
+      "association_score": 0.7329375371178446
+    },
+    {
+      "gene_symbol": "SLC18A2",
+      "gene_name": "solute carrier family 18 member A2",
+      "association_score": 0.5932607924873725
+    },
+    {
+      "gene_symbol": "SLC6A2",
+      "gene_name": "solute carrier family 6 member 2",
+      "association_score": 0.5151106486578165
+    },
+    {
+      "gene_symbol": "SLC2A3",
+      "gene_name": "solute carrier family 2 member 3",
+      "association_score": 0.4893507711521515
+    },
+    {
+      "gene_symbol": "SLC6A3",
+      "gene_name": "solute carrier family 6 member 3",
+      "association_score": 0.475512212859121
+    }
+  ],
+  "guides": [
+    {
+      "gene": "HTT",
+      "guide_sequence": "GGTCTCACTGCTTTGCACCG",
+      "position": 13261,
+      "pam": "TGG",
+      "seq30": "TCCAGGTCTCACTGCTTTGCACCGTGGTCA",
+      "xgb_score": 0.8741,
+      "position_pct": 98.43
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "TGACACCACGGAATACCCTG",
+      "position": 2361,
+      "pam": "AGG",
+      "seq30": "CTCTTGACACCACGGAATACCCTGAGGAAC",
+      "xgb_score": 0.8289,
+      "position_pct": 17.53
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "CAGCAGGTCCCGCTTCCACG",
+      "position": 2484,
+      "pam": "TGG",
+      "seq30": "TCCTCAGCAGGTCCCGCTTCCACGTGGGAG",
+      "xgb_score": 0.8078,
+      "position_pct": 18.44
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "AAAGCAGAAAACTTACACAG",
+      "position": 2800,
+      "pam": "AGG",
+      "seq30": "GGCAAAAGCAGAAAACTTACACAGAGGGGC",
+      "xgb_score": 0.8076,
+      "position_pct": 20.78
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "TACCCCAAAAGCCATCAGCG",
+      "position": 7146,
+      "pam": "AGG",
+      "seq30": "CAAATACCCCAAAAGCCATCAGCGAGGAGG",
+      "xgb_score": 0.7864,
+      "position_pct": 53.04
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "ATGACTCCGAGCACTTAACG",
+      "position": 5876,
+      "pam": "TGG",
+      "seq30": "CTCCATGACTCCGAGCACTTAACGTGGCTC",
+      "xgb_score": 0.7728,
+      "position_pct": 43.62
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "GGAACAGCATCACACCCCTG",
+      "position": 8018,
+      "pam": "AGG",
+      "seq30": "CTGGGGAACAGCATCACACCCCTGAGGGAG",
+      "xgb_score": 0.77,
+      "position_pct": 59.52
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "GGATGGTCACCCAAACCGGG",
+      "position": 7399,
+      "pam": "AGG",
+      "seq30": "GCTTGGATGGTCACCCAAACCGGGAGGGGA",
+      "xgb_score": 0.7667,
+      "position_pct": 54.92
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "AGCATTCCCTGAGATCCCCG",
+      "position": 7434,
+      "pam": "TGG",
+      "seq30": "GCACAGCATTCCCTGAGATCCCCGTGGAGT",
+      "xgb_score": 0.7653,
+      "position_pct": 55.18
+    },
+    {
+      "gene": "HTT",
+      "guide_sequence": "GGAGTTTGCGTGCTGCCCTG",
+      "position": 686,
+      "pam": "TGG",
+      "seq30": "CCTCGGAGTTTGCGTGCTGCCCTGTGGAGG",
+      "xgb_score": 0.7646,
+      "position_pct": 5.09
+    }
+  ],
+  "query": "I am designing a CRISPR-Cas9 experiment to treat Huntington's disease. What genes would you target and why? For each gene, suggest a guide RNA sequence (20nt, NGG PAM) and explain what makes it likely to be efficient.",
+  "baseline_response": "Huntington's disease is caused by an expansion of CAG trinucleotide repeats in the huntingtin (HTT) gene, which leads to an abnormally long polyglutamine tract in the huntingtin protein. The primary therapeutic strategy for Huntington's disease involves reducing or eliminating the mutant huntingtin protein. Here’s how we can approach targeting the HTT gene using CRISPR-Cas9:\n\n### Targeting the HTT Gene\n\n1. **Gene**: **HTT**\n2. **Target Region**: The region containing the CAG repeat expansion.\n3. **Guide RNA Sequence**: A guide RNA that targets the region with the CAG repeat expansion.\n\n#### Guide RNA Design:\n- **Sequence**: `5'-CTGTTAGGACGATGCGCTGAA-3'`\n- **PAM Sequence**: `5'-GG-3'` (follows the guide RNA)\n- **Location**: This sequence is designed to target a specific region within the HTT gene where the CAG repeat expansion occurs. The exact location within the gene will depend on the specific repeat expansion site in the patient's genome, but this sequence is illustrative.\n\n### Efficiency Considerations:\n- **Off-target Effects**: Ensure that the guide RNA does not target non-HTT genes. Use bioinformatics tools like CRISPResso, CHOPCHOP, or CRISPR Design to predict potential off-target sites and optimize the guide RNA accordingly.\n- **On-target Activity**: The guide RNA should be designed to have high specificity to the CAG repeat region to minimize unintended edits elsewhere in the genome.\n- **Delivery and Expression**: Efficient delivery of the Cas9 nuclease and guide RNA into neurons is crucial. Viral vectors such as AAV9 can be used for this purpose, as they have been shown to efficiently transduce neurons in vivo.\n\n### Alternative Approaches:\n- **Base Editing**: Instead of using Cas9 with a double-strand break, base editors could be used to convert the CAG repeats directly to CGG, potentially correcting the mutation without causing DSBs.\n- **Gene Knockdown**: Using sgRNAs to target specific exons of the HTT gene to reduce expression levels.\n\n### Example of Base Editor Targeting:\n- **Guide RNA Sequence**: `5'-CTGTTAGGACGATGCGCTGAA-3'`\n- **Base Editor**: A base editor (e.g., CBE or ABE) that converts CAG to CGG.\n\nBy focusing on the HTT gene and using carefully designed guide RNAs, you can effectively target the mutant allele responsible for Huntington's disease, aiming to reduce or eliminate the production of the toxic mutant huntingtin protein.",
+  "rag_response": "For treating Huntington's disease, the primary gene to target is **HTT** (huntingtin), given its direct involvement in the disease due to the expanded CAG repeat. Here are the recommended guide RNA sequences based on the ML pipeline data:\n\n### Target Gene: HTT\n\n#### Recommended Guide RNAs:\n\n1. **Guide RNA Sequence:** `GGTCTCACTGCTTTGCACCG`\n   - **Score:** 0.8741\n   - **Position:** 13261 (98.43%)\n   - **PAM:** TGG\n   - **Rationale:** This guide RNA has the highest efficiency score among those targeting HTT, indicating strong binding affinity and potential for effective gene disruption.\n\n2. **Guide RNA Sequence:** `TGACACCACGGAATACCCTG`\n   - **Score:** 0.8289\n   - **Position:** 2361 (17.53%)\n   - **PAM:** AGG\n   - **Rationale:** While slightly lower in score compared to the top choice, this guide RNA still shows high efficiency and could be a viable alternative if the top choice does not work.\n\n3. **Guide RNA Sequence:** `CAGCAGGTCCCGCTTCCACG`\n   - **Score:** 0.8078\n   - **Position:** 2484 (18.44%)\n   - **PAM:** TGG\n   - **Rationale:** This guide RNA also ranks highly and provides another option with good efficiency.\n\n### Additional Considerations:\n\n- **SLC18A2, SLC6A2, SLC2A3, and SLC6A3:** Although these genes are associated with Huntington's disease, they are not as strongly implicated as HTT. However, if additional targets are needed, the ML pipeline suggests the following guide RNAs:\n  \n  - **SLC18A2:** \n    - `GGGAACAGCATCACACCCCTG` (score: 0.77)\n    - **Position:** 8018 (59.52%)\n    - **PAM:** AGG\n  \n  - **SLC6A2:** \n    - `GGATGGTCACCCAAACCGGG` (score: 0.7667)\n    - **Position:** 7399 (54.92%)\n    - **PAM:** AGG\n  \n  - **SLC2A3:** \n    - `GGAGTTTGCGTGCTGCCCTG` (score: 0.7646)\n    - **Position:** 686 (5.09%)\n    - **PAM:** TGG\n  \n  - **SLC6A3:** \n    -",
+  "retrieved_chunks": [
+    "Title: PAM-altering SNP-based allele-specific CRISPR-Cas9 therapeutic strategies for Huntington's disease.\nAbstract: Huntington's disease (HD) is caused by an expanded CAG repeat in huntingtin (HTT). Since HD is dominant and loss of HTT leads to neurological abnormalities, safe therapeutic strategies require selective inactivation of mutant HTT. Previously, we proposed a concept of CRISPR-Cas9 using mutant-specific PAM sites generated by SNPs to selectively inactivate mutant HTT. Aiming at revealing suitable tar",
+    "Title: RNA-Targeting CRISPR/CasRx system relieves disease symptoms in Huntington's disease models.\nAbstract: BACKGROUND: HD is a devastating neurodegenerative disorder caused by the expansion of CAG repeats in the HTT. Silencing the expression of mutated proteins is a therapeutic direction to rescue HD patients, and recent advances in gene editing technology such as CRISPR/CasRx have opened up new avenues for therapeutic intervention. METHODS: The CRISPR/CasRx system was employed to target human HTT exon",
+    "Title: CRISPR-Cas9 mediated genome editing of Huntington's disease neurospheres.\nAbstract: BACKGROUND: Huntington's disease (HD) is a fatal genetic disease caused by polyglutamine aggregation encoded by an expanded CAG repeat in the huntingtin gene (HTT). In this study, we cultured neurospheres derived from R6/2 mice, a representative animal model of HD, as an in vitro model. GuideRNAs were designed to induce large deletion or frameshift indel mutation of CAG expansion. These gRNAs and ",
+    "Title: In vivo CRISPR-Cas9 genome editing in mice identifies genetic modifiers of somatic CAG repeat instability in Huntington's disease.\nAbstract: Huntington's disease, one of more than 50 inherited repeat expansion disorders(1), is a dominantly inherited neurodegenerative disease caused by a CAG expansion in HTT(2). Inherited CAG repeat length is the primary determinant of age of onset, with human genetic studies underscoring that the disease is driven by the CAG length-dependent propensity of the repeat to further expand in the brain(3-9).",
+    "Title: Therapeutic strategies for Huntington's disease.\nAbstract: PURPOSE OF REVIEW: Huntington's disease is a fatal autosomal dominant neurodegenerative disorder caused by a trinucleotide expansion in the HTT gene, and current therapies focus on symptomatic treatment. This review explores therapeutic approaches that directly target the pathogenic mutation, disrupt HTT mRNA or its translation. RECENT FINDINGS: Zinc-finger transcription repressors and CRISPR-Cas9",
+    "Title: Emerging therapies in Huntington's disease.\nAbstract: Introduction: Huntington's disease (HD) is an inherited neurodegenerative condition for which there are no disease-modifying treatments. The availability of early genetic diagnosis makes HD an ideal candidate for early intervention. Growing understanding of pathogenesis has led to the identification of new therapeutic targets for which some compounds are now in clinical trials. Areas covered: A de"
+  ]
+}

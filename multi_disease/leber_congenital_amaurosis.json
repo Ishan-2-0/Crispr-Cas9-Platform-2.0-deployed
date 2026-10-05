@@ -1,0 +1,134 @@
+{
+  "disease": "Leber congenital amaurosis",
+  "expected_gene": "CEP290",
+  "top_genes": [
+    {
+      "gene_symbol": "RPE65",
+      "gene_name": "retinoid isomerohydrolase RPE65",
+      "association_score": 0.8653447075042523
+    },
+    {
+      "gene_symbol": "CRB1",
+      "gene_name": "crumbs cell polarity complex component 1",
+      "association_score": 0.8594557844644253
+    },
+    {
+      "gene_symbol": "NMNAT1",
+      "gene_name": "nicotinamide nucleotide adenylyltransferase 1",
+      "association_score": 0.8504380430552877
+    },
+    {
+      "gene_symbol": "GUCY2D",
+      "gene_name": "guanylate cyclase 2D, retinal",
+      "association_score": 0.8399635783168828
+    },
+    {
+      "gene_symbol": "CEP290",
+      "gene_name": "centrosomal protein 290",
+      "association_score": 0.8376493827330441
+    }
+  ],
+  "guides": [
+    {
+      "gene": "RPE65",
+      "guide_sequence": "CCTTGTTAATGTCTACCCAG",
+      "position": 293,
+      "pam": "TGG",
+      "seq30": "ATGCCCTTGTTAATGTCTACCCAGTGGGGG",
+      "xgb_score": 0.8058,
+      "position_pct": 11.94
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "TCTTTGGGGAGCCAACTACA",
+      "position": 704,
+      "pam": "TGG",
+      "seq30": "GGAGTCTTTGGGGAGCCAACTACATGGATT",
+      "xgb_score": 0.7678,
+      "position_pct": 28.69
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "GATGCCTTGGAAGAAGATGA",
+      "position": 1326,
+      "pam": "TGG",
+      "seq30": "CCCAGATGCCTTGGAAGAAGATGATGGTGT",
+      "xgb_score": 0.7257,
+      "position_pct": 54.03
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "TGAGTCCAATGAAACCATGG",
+      "position": 734,
+      "pam": "GGG",
+      "seq30": "GTTTTGAGTCCAATGAAACCATGGGGGTTT",
+      "xgb_score": 0.7246,
+      "position_pct": 29.91
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "TTGAGTCCAATGAAACCATG",
+      "position": 733,
+      "pam": "GGG",
+      "seq30": "TGTTTTGAGTCCAATGAAACCATGGGGGTT",
+      "xgb_score": 0.7082,
+      "position_pct": 29.87
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "AATCTGTGTTTAATCAACTG",
+      "position": 2105,
+      "pam": "AGG",
+      "seq30": "AGAAAATCTGTGTTTAATCAACTGAGGCCT",
+      "xgb_score": 0.7059,
+      "position_pct": 85.78
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "CAGGTTGAGCATCCTGCTGG",
+      "position": 58,
+      "pam": "TGG",
+      "seq30": "TATCCAGGTTGAGCATCCTGCTGGTGGTTA",
+      "xgb_score": 0.6637,
+      "position_pct": 2.36
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "TTTTGAGTCCAATGAAACCA",
+      "position": 731,
+      "pam": "TGG",
+      "seq30": "ATTGTTTTGAGTCCAATGAAACCATGGGGG",
+      "xgb_score": 0.6447,
+      "position_pct": 29.79
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "AATATTGACAAGGCTGACAC",
+      "position": 1014,
+      "pam": "AGG",
+      "seq30": "TTTGAATATTGACAAGGCTGACACAGGCAA",
+      "xgb_score": 0.6393,
+      "position_pct": 41.32
+    },
+    {
+      "gene": "RPE65",
+      "guide_sequence": "GAAACTGTTTGAAACTGTGG",
+      "position": 87,
+      "pam": "AGG",
+      "seq30": "ACAAGAAACTGTTTGAAACTGTGGAGGAAC",
+      "xgb_score": 0.6109,
+      "position_pct": 3.55
+    }
+  ],
+  "query": "I am designing a CRISPR-Cas9 experiment to treat Leber congenital amaurosis. What genes would you target and why? For each gene, suggest a guide RNA sequence (20nt, NGG PAM) and explain what makes it likely to be efficient.",
+  "baseline_response": "Leber congenital amaurosis (LCA) is a group of inherited retinal dystrophies characterized by severe vision loss at birth or in early childhood. It is often caused by mutations in genes involved in photoreceptor cell function. Several genes have been identified as causing LCA, including *RPE65*, *CNGA3*, *CNGB3*, *GUCY2D*, *AIPL1*, and *CRB1*. Here, I will focus on two of the most common genes, *RPE65* and *CNGA3*, and provide guide RNA sequences for each.\n\n### Gene 1: RPE65\n\n**Function**: RPE65 is a key enzyme in the visual cycle, which converts vitamin A into all-trans-retinol. Mutations in this gene lead to a deficiency in this conversion process, resulting in the accumulation of all-trans-retinyl esters in the retina.\n\n**Targeting Strategy**: Since RPE65 is crucial for the visual cycle, targeting this gene could potentially restore vision if the mutations can be corrected.\n\n**Guide RNA Sequence**: `CACTTGTGGTTCCCGTGATAGC`\n\n**Explanation**: This guide RNA targets a region within the coding sequence of the *RPE65* gene. The sequence is chosen to be away from highly conserved regions and exons to minimize off-target effects while ensuring high specificity. The presence of the NGG PAM sequence ensures compatibility with the Cas9 nuclease.\n\n### Gene 2: CNGA3\n\n**Function**: CNGA3 encodes the alpha subunit of the cyclic nucleotide-gated ion channel, which is essential for the hyperpolarization of photoreceptors in response to light. Mutations in this gene lead to reduced sensitivity to light and other symptoms associated with LCA.\n\n**Targeting Strategy**: Correcting mutations in *CNGA3* could restore normal phototransduction and improve vision.\n\n**Guide RNA Sequence**: `ACGAGTCAGCGAGGAGAGGAGC`\n\n**Explanation**: This guide RNA targets a non-coding region of the *CNGA3* gene, specifically an intron, to avoid disrupting the reading frame of the coding sequence. This approach minimizes the risk of inducing frameshift mutations that could lead to non-functional proteins. The choice of the target site also ensures that it is unique enough to avoid off-target effects.\n\n### General Considerations\n\n- **Off-target Effects**: Carefully select guide RNA sequences to minimize off-target effects. Tools like CRISPRoff, CRISPRseek, and others can help predict potential off-target sites.\n- **Delivery Method**: Efficient delivery of the CRISPR-Cas9 system to the retinal cells is critical. Viral vectors (such as AAV) are commonly used for ocular gene therapy.\n- **Safety and Efficacy**:",
+  "rag_response": "For treating Leber congenital amaurosis (LCA), the primary genes to target based on the provided context are **RPE65** and **CRB1**. These genes have strong associations with LCA and are supported by both experimental evidence and theoretical predictions.\n\n### Targeting RPE65\n\n#### Guide RNA Sequence:\n1. **CCTTGTTAATGTCTACCCAG**\n   - **Score:** 0.8058\n   - **Position:** 293 (11.94%)\n   - **PAM:** TGG\n   - **Why Efficient:** This guide RNA has the highest score among those ranked by the ML pipeline, indicating high predicted efficiency. It is also located in a region with a relatively low GC content, which is generally favorable for Cas9 binding.\n\n2. **TCTTTGGGGAGCCAACTACA**\n   - **Score:** 0.7678\n   - **Position:** 704 (28.69%)\n   - **PAM:** TGG\n   - **Why Efficient:** This guide RNA also scores well and is located in another accessible region of the gene. Its position is slightly further downstream compared to the top choice but still offers a good balance between efficiency and accessibility.\n\n### Targeting CRB1\n\n#### Guide RNA Sequence:\n1. **TCTTTGGGGAGCCAACTACA**\n   - **Score:** 0.7678\n   - **Position:** 704 (28.69%)\n   - **PAM:** TGG\n   - **Why Efficient:** Although CRB1 does not have as many highly scored guide RNAs as RPE65, this guide RNA is still among the top-scoring options and is located in a region with a TGG PAM, which is compatible with most Cas9 variants.\n\n### Additional Considerations:\n- **NMNAT1**: While associated with LCA, the evidence for targeting this gene is less direct compared to RPE65 and CRB1. However, if additional genetic factors are involved, it could be considered.\n- **GUCY2D**: Also associated with LCA, but the evidence is less robust compared to RPE65 and CRB1.\n\n### Summary:\n- **Primary Target:** RPE65\n  - **Top Guide RNA:** CCTTGTTAATGTCTACCCAG\n  - **Alternative Guide RNA:** TCTTTGGGGAGCCAACTACA\n- **Secondary Target:** CRB1\n  - **Guide RNA:** TCTTTGGGGAGCCAACTACA\n\nThese guide RNAs are prioritized based on their high scores from the ML pipeline, indicating they are likely to be efficient for CRISPR-Cas9 mediated gene editing in the context of treating Leber congenital amaurosis.",
+  "retrieved_chunks": [
+    "Title: CRISPR-Cas9-mediated therapeutic editing of Rpe65 ameliorates the disease phenotypes in a mouse model of Leber congenital amaurosis.\nAbstract: Leber congenital amaurosis (LCA), one of the leading causes of childhood-onset blindness, is caused by autosomal recessive mutations in several genes including RPE65. In this study, we performed CRISPR-Cas9-mediated therapeutic correction of a disease-associated nonsense mutation in Rpe65 in rd12 mice, a model of human LCA. Subretinal injection of adeno-associated virus carrying CRISPR-Cas9 and do",
+    "Title: PAM-flexible Engineered FnCas9 variants for robust and ultra-precise genome editing and diagnostics.\nAbstract: The clinical success of CRISPR therapies hinges on the safety and efficacy of Cas proteins. The Cas9 from Francisella novicida (FnCas9) is highly precise, with a negligible affinity for mismatched substrates, but its low cellular targeting efficiency limits therapeutic use. Here, we rationally engineer the protein to develop enhanced FnCas9 (enFnCas9) variants and broaden their accessibility acros",
+    "Title: Gene-Based Therapeutics for Inherited Retinal Diseases.\nAbstract: Inherited retinal diseases (IRDs) are a heterogenous group of orphan eye diseases that typically result from monogenic mutations and are considered attractive targets for gene-based therapeutics. Following the approval of an IRD gene replacement therapy for Leber's congenital amaurosis due to RPE65 mutations, there has been an intensive international research effort to identify the optimal gene th",
+    "Title: Gene therapy and genome surgery in the retina.\nAbstract: Precision medicine seeks to treat disease with molecular specificity. Advances in genome sequence analysis, gene delivery, and genome surgery have allowed clinician-scientists to treat genetic conditions at the level of their pathology. As a result, progress in treating retinal disease using genetic tools has advanced tremendously over the past several decades. Breakthroughs in gene delivery vecto",
+    "Title: Leber congenital amaurosis/early-onset severe retinal dystrophy: current management and clinical trials.\nAbstract: Leber congenital amaurosis (LCA) is a severe congenital/early-onset retinal dystrophy. Given its monogenic nature and the immunological and anatomical privileges of the eye, LCA has been particularly targeted by cutting-edge research. In this review, we describe the current management of LCA, and highlight the clinical trials that are on-going and planned. RPE65-related LCA pivotal trials, which c",
+    "Title: Cas9-targeted-based long-read sequencing for genetic screening of RPE65 locus.\nAbstract: INTRODUCTION: Long-read sequencing (LRS) enables accurate structural variant detection and variant phasing. When a molecular diagnosis is suspected, target enrichment can reduce the cost and duration of sequencing. METHODS: LRS was conducted in five inherited retinal dystrophy (IRD) patients harboring a monoallelic variant in RPE65 that remained uncharacterized after clinical exome sequencing (CES"
+  ]
+}

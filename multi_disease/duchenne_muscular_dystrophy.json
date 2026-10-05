@@ -1,0 +1,134 @@
+{
+  "disease": "Duchenne muscular dystrophy",
+  "expected_gene": "DMD",
+  "top_genes": [
+    {
+      "gene_symbol": "DMD",
+      "gene_name": "dystrophin",
+      "association_score": 0.8683877887777448
+    },
+    {
+      "gene_symbol": "NR3C1",
+      "gene_name": "nuclear receptor subfamily 3 group C member 1",
+      "association_score": 0.5868338886074015
+    },
+    {
+      "gene_symbol": "NR3C2",
+      "gene_name": "nuclear receptor subfamily 3 group C member 2",
+      "association_score": 0.5581630533410797
+    },
+    {
+      "gene_symbol": "HDAC4",
+      "gene_name": "histone deacetylase 4",
+      "association_score": 0.5332019780574652
+    },
+    {
+      "gene_symbol": "HDAC9",
+      "gene_name": "histone deacetylase 9",
+      "association_score": 0.5259158986905159
+    }
+  ],
+  "guides": [
+    {
+      "gene": "DMD",
+      "guide_sequence": "CTGAACTAAAAGCATCCGTG",
+      "position": 45,
+      "pam": "GGG",
+      "seq30": "TGCTCTGAACTAAAAGCATCCGTGGGGACC",
+      "xgb_score": 0.8702,
+      "position_pct": 0.64
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "TGGAAGCCAGTTCTGACCAG",
+      "position": 2059,
+      "pam": "TGG",
+      "seq30": "CATTTGGAAGCCAGTTCTGACCAGTGGAAG",
+      "xgb_score": 0.7935,
+      "position_pct": 29.06
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "TCAAGCAGACAAATCTCCAG",
+      "position": 544,
+      "pam": "TGG",
+      "seq30": "AAGCTCAAGCAGACAAATCTCCAGTGGATA",
+      "xgb_score": 0.7841,
+      "position_pct": 7.68
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "CACAGTCAAAAGGAACTGGG",
+      "position": 5709,
+      "pam": "TGG",
+      "seq30": "TTCTCACAGTCAAAAGGAACTGGGTGGTTT",
+      "xgb_score": 0.7783,
+      "position_pct": 80.57
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "ATCAAGTTATAAAATCACAG",
+      "position": 1129,
+      "pam": "AGG",
+      "seq30": "CTTGATCAAGTTATAAAATCACAGAGGGTG",
+      "xgb_score": 0.7718,
+      "position_pct": 15.93
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "ATGATACGGGACGAACAGGG",
+      "position": 3217,
+      "pam": "AGG",
+      "seq30": "GTTTATGATACGGGACGAACAGGGAGGATC",
+      "xgb_score": 0.7579,
+      "position_pct": 45.4
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "TGAGCAAGTCAAGTTACTGG",
+      "position": 410,
+      "pam": "TGG",
+      "seq30": "AGCTTGAGCAAGTCAAGTTACTGGTGGAAG",
+      "xgb_score": 0.7539,
+      "position_pct": 5.79
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "CTGAGGAGGTCAATACTGAG",
+      "position": 2383,
+      "pam": "TGG",
+      "seq30": "CAGGCTGAGGAGGTCAATACTGAGTGGGAA",
+      "xgb_score": 0.7436,
+      "position_pct": 33.63
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "TTTGAGAACTGTCAGCTGAG",
+      "position": 5016,
+      "pam": "TGG",
+      "seq30": "CTCATTTGAGAACTGTCAGCTGAGTGGGGC",
+      "xgb_score": 0.7369,
+      "position_pct": 70.79
+    },
+    {
+      "gene": "DMD",
+      "guide_sequence": "CCATAAAATGCACTATCCCA",
+      "position": 3707,
+      "pam": "TGG",
+      "seq30": "AAGGCCATAAAATGCACTATCCCATGGTGG",
+      "xgb_score": 0.7236,
+      "position_pct": 52.31
+    }
+  ],
+  "query": "I am designing a CRISPR-Cas9 experiment to treat Duchenne muscular dystrophy. What genes would you target and why? For each gene, suggest a guide RNA sequence (20nt, NGG PAM) and explain what makes it likely to be efficient.",
+  "baseline_response": "Duchenne muscular dystrophy (DMD) is caused by mutations in the DMD gene, which results in a lack of functional dystrophin protein. The primary strategy for using CRISPR-Cas9 in this context would be to either correct the mutation directly or to induce a double-strand break at the site of the mutation, leading to non-homologous end joining (NHEJ) that introduces a frameshift mutation, rendering the gene non-functional. Here are some potential targets within the DMD gene and suggested guide RNA sequences:\n\n### 1. Targeting the Start Codon (ATG)\n**Gene:** DMD  \n**Target Region:** Around the start codon (ATG)  \n**Guide RNA Sequence:** `AGT GGT CCG TGG CCA TCC T`  \n**Reasoning:**  \n- **Efficiency:** Directly targeting the start codon can lead to a premature stop codon insertion, effectively inactivating the gene.\n- **Specificity:** This region is highly conserved and less likely to have off-target effects on other genes.\n\n### 2. Targeting Exon 51\n**Gene:** DMD  \n**Target Region:** Exon 51  \n**Guide RNA Sequence:** `AGT GGT CCG TGG CCA TCC T`  \n**Reasoning:**  \n- **Efficiency:** Exon 51 skipping is a known therapeutic approach in DMD patients. Correcting this exon can restore dystrophin production.\n- **Specificity:** Exon 51 is a specific region where mutations often occur, and targeting this region can specifically address one of the most common mutations.\n\n### 3. Targeting the 3' Untranslated Region (UTR)\n**Gene:** DMD  \n**Target Region:** 3' UTR  \n**Guide RNA Sequence:** `AGT GGT CCG TGG CCA TCC T`  \n**Reasoning:**  \n- **Efficiency:** While not as direct as targeting exons, disrupting the 3' UTR can affect splicing and translation efficiency, potentially reducing the severity of the disease.\n- **Specificity:** The 3' UTR is less critical for the primary function of the gene but can still impact overall gene expression.\n\n### 4. Targeting the 5' Untranslated Region (UTR)\n**Gene:** DMD  \n**Target Region:** 5' UTR  \n**Guide RNA Sequence:** `AGT GGT CCG TGG CCA TCC T`  \n**Reasoning:**  \n- **Efficiency:** Similar to the 3' UTR, targeting the 5' UTR can affect translational efficiency.\n- **Specificity:** The 5' UTR is involved in mRNA stability and translation initiation, so disruption can reduce dystrophin production.\n\n### 5. Targeting an Intron\n**Gene:** DMD  \n**",
+  "rag_response": "For treating Duchenne muscular dystrophy (DMD), targeting the DMD gene directly or using a CRISPR-Cas9 approach to upregulate utrophin, a dystrophin paralog, are promising strategies. Based on the provided context, I will prioritize the highest scored guide RNAs for these targets.\n\n### Targeting DMD Gene\n\n**Gene:** DMD (dystrophin)\n\n**Guide RNA Sequence:** \n- **CTGAACTAAAAGCATCCGTG**\n  - **Score:** 0.8702\n  - **Position:** 45 (0.64%)\n  - **PAM:** GGG\n  - **Reason:** This guide RNA has the highest score among those listed, indicating high efficiency. It is also positioned at a relatively low genomic position, which can be advantageous for delivery purposes.\n\n### Targeting Utrophin\n\n**Gene:** UTN1 (utrophin)\n\nWhile the exact guide RNA sequences for utrophin are not provided in the given data, based on the literature, disrupting repressor binding sites of utrophin could be beneficial. Here are some hypothetical guide RNA sequences that could target potential repressor binding sites:\n\n**Guide RNA Sequence:**\n- **CGGAGCTTCTGAGTCTGAGA**\n  - **Score:** Hypothetical (since no specific score is provided, assume a high score based on efficiency)\n  - **Position:** Hypothetical (position within the repressor binding site region)\n  - **PAM:** GGG\n  - **Reason:** This sequence is designed to disrupt a repressor binding site, potentially leading to increased utrophin expression. The PAM sequence (GGG) is compatible with Cas9.\n\n### Summary\n\n1. **Target DMD Gene:**\n   - **Guide RNA Sequence:** CTGAACTAAAAGCATCCGTG\n   - **Score:** 0.8702\n   - **Position:** 45 (0.64%)\n   - **PAM:** GGG\n   - **Efficiency:** High score indicates high efficiency, and the low genomic position may facilitate easier delivery.\n\n2. **Target Utrophin Gene:**\n   - **Guide RNA Sequence:** CGGAGCTTCTGAGTCTGAGA\n   - **Score:** Hypothetical (high)\n   - **Position:** Hypothetical\n   - **PAM:** GGG\n   - **Efficiency:** Disrupting repressor binding sites could lead to increased utrophin expression, which is a promising therapeutic approach for DMD.\n\nThese guide RNAs are prioritized based on their scores and the potential impact on the disease.",
+  "retrieved_chunks": [
+    "Title: Delivery challenges for CRISPR-Cas9 genome editing for Duchenne muscular dystrophy.\nAbstract: Duchene muscular dystrophy (DMD) is an X-linked neuromuscular disorder that affects about one in every 5000 live male births. DMD is caused by mutations in the gene that codes for dystrophin, which is required for muscle membrane stabilization. The loss of functional dystrophin causes muscle degradation that leads to weakness, loss of ambulation, cardiac and respiratory complications, and eventual",
+    "Title: CRISPR-Cas9-mediated upregulation of utrophin ameliorates Duchenne muscular dystrophy.\nAbstract: Duchenne muscular dystrophy (DMD) is a lethal neuromuscular disorder caused by loss of dystrophin. Upregulating utrophin, a dystrophin paralog, is a promising gene therapy approach. Here, we present a CRISPR-Cas9-based strategy to enhance utrophin expression by disrupting repressor binding sites. Using a Cas9/guide RNA (gRNA) ribonucleoprotein complex, we disrupted several such sites in DMD myobla",
+    "Title: CRISPR-Cas9 Gene Therapy for Duchenne Muscular Dystrophy.\nAbstract: Discovery of the CRISPR-Cas (clustered regularly interspaced short palindromic repeat, CRISPR-associated) system a decade ago has opened new possibilities in the field of precision medicine. CRISPR-Cas was initially identified in bacteria and archaea to play a protective role against foreign genetic elements during viral infections. The application of this technique for the correction of different",
+    "Title: Death after High-Dose rAAV9 Gene Therapy in a Patient with Duchenne's Muscular Dystrophy.\nAbstract: We treated a 27-year-old patient with Duchenne's muscular dystrophy (DMD) with recombinant adeno-associated virus (rAAV) serotype 9 containing dSaCas9 (i.e., \"dead\" Staphylococcus aureus Cas9, in which the Cas9 nuclease activity has been inactivated) fused to VP64; this transgene was designed to up-regulate cortical dystrophin as a custom CRISPR-transactivator therapy. The dose of rAAV used was 1x",
+    "Title: Mechanism and Applications of CRISPR/Cas-9-Mediated Genome Editing.\nAbstract: Clustered regularly interspaced short palindromic repeat (CRISPR) and their associated protein (Cas-9) is the most effective, efficient, and accurate method of genome editing tool in all living cells and utilized in many applied disciplines. Guide RNA (gRNA) and CRISPR-associated (Cas-9) proteins are the two essential components in CRISPR/Cas-9 system. The mechanism of CRISPR/Cas-9 genome editing ",
+    "Title: The road toward AAV-mediated gene therapy of Duchenne muscular dystrophy.\nAbstract: Forty years after the dystrophin gene was cloned, significant progress has been made in developing gene therapy approaches for Duchenne muscular dystrophy (DMD). The disorder has presented numerous challenges, including the enormous size of the gene (2.2 MB), the need to target muscles body wide, and immunogenic issues against both vectors and dystrophin. Among human genetic disorders, DMD is rela"
+  ]
+}

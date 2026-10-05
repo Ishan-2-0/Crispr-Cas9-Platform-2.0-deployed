@@ -1,0 +1,134 @@
+{
+  "disease": "chronic myeloid leukemia",
+  "expected_gene": "BCR",
+  "top_genes": [
+    {
+      "gene_symbol": "ABL1",
+      "gene_name": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
+      "association_score": 0.8358327889605259
+    },
+    {
+      "gene_symbol": "BCR",
+      "gene_name": "BCR activator of RhoGEF and GTPase",
+      "association_score": 0.8286846828220631
+    },
+    {
+      "gene_symbol": "KIT",
+      "gene_name": "KIT proto-oncogene, receptor tyrosine kinase",
+      "association_score": 0.7093002190279202
+    },
+    {
+      "gene_symbol": "SETBP1",
+      "gene_name": "SET binding protein 1",
+      "association_score": 0.6777497893566422
+    },
+    {
+      "gene_symbol": "PDGFRB",
+      "gene_name": "platelet derived growth factor receptor beta",
+      "association_score": 0.6514606136146885
+    }
+  ],
+  "guides": [
+    {
+      "gene": "ABL1",
+      "guide_sequence": "GGTTCATCATCATTCAACGG",
+      "position": 1927,
+      "pam": "TGG",
+      "seq30": "AGTTGGTTCATCATCATTCAACGGTGGCCG",
+      "xgb_score": 0.879,
+      "position_pct": 28.68
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "GGGCCGAGACATCAGCAACG",
+      "position": 3244,
+      "pam": "GGG",
+      "seq30": "AAGAGGGCCGAGACATCAGCAACGGGGCAC",
+      "xgb_score": 0.8178,
+      "position_pct": 48.28
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "AAGAATGGAAGCCTGAACTG",
+      "position": 5143,
+      "pam": "AGG",
+      "seq30": "CTCCAAGAATGGAAGCCTGAACTGAGGCCT",
+      "xgb_score": 0.8166,
+      "position_pct": 76.54
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "ACCATGAAGCACAAGCTGGG",
+      "position": 2060,
+      "pam": "CGG",
+      "seq30": "CATCACCATGAAGCACAAGCTGGGCGGGGG",
+      "xgb_score": 0.8132,
+      "position_pct": 30.66
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "TCTGTGGAGTTCCTGCTCCG",
+      "position": 4959,
+      "pam": "TGG",
+      "seq30": "TTTATCTGTGGAGTTCCTGCTCCGTGGACT",
+      "xgb_score": 0.7805,
+      "position_pct": 73.81
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "AAACCCGCCAGCCTCCAGAG",
+      "position": 4374,
+      "pam": "CGG",
+      "seq30": "CGGAAAACCCGCCAGCCTCCAGAGCGGATC",
+      "xgb_score": 0.7804,
+      "position_pct": 65.1
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "GAAAGCTTGAGTCTCAAGGG",
+      "position": 5508,
+      "pam": "TGG",
+      "seq30": "GCAAGAAAGCTTGAGTCTCAAGGGTGGCAG",
+      "xgb_score": 0.7662,
+      "position_pct": 81.98
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "AAGCAGGCTCAGGTGCACCA",
+      "position": 3900,
+      "pam": "GGG",
+      "seq30": "AGCAAAGCAGGCTCAGGTGCACCAGGGGGC",
+      "xgb_score": 0.7593,
+      "position_pct": 58.04
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "GAACAAGTTTGCCTTCCGAG",
+      "position": 4567,
+      "pam": "AGG",
+      "seq30": "TGAGGAACAAGTTTGCCTTCCGAGAGGCCA",
+      "xgb_score": 0.7531,
+      "position_pct": 67.97
+    },
+    {
+      "gene": "ABL1",
+      "guide_sequence": "AAGGAATCATCGAGGCATGG",
+      "position": 1361,
+      "pam": "GGG",
+      "seq30": "GAAGAAGGAATCATCGAGGCATGGGGGTCC",
+      "xgb_score": 0.7513,
+      "position_pct": 20.26
+    }
+  ],
+  "query": "I am designing a CRISPR-Cas9 experiment to treat chronic myeloid leukemia. What genes would you target and why? For each gene, suggest a guide RNA sequence (20nt, NGG PAM) and explain what makes it likely to be efficient.",
+  "baseline_response": "Chronic Myeloid Leukemia (CML) is primarily driven by the BCR-ABL1 fusion gene, which results from the Philadelphia chromosome translocation t(9;22)(q34;q11). The BCR-ABL1 fusion protein leads to uncontrolled cell proliferation and is a key therapeutic target for CML. Here, I will outline potential targets and provide guide RNA sequences along with explanations of their efficiency.\n\n### Target 1: BCR-ABL1\n\n**Gene:** BCR-ABL1  \n**Reason:** The BCR-ABL1 fusion gene is the primary driver of CML. Inactivating this gene can halt the disease progression.\n\n#### Guide RNA Sequence:\n- **Guide RNA 1:** `AGTGTAGACCGAGTGGTTTG`\n- **Guide RNA 2:** `CTGACAGCGTCCATGTCGTA`\n\n**Explanation:**\n- **Guide RNA 1** targets the ABL1 part of the BCR-ABL1 fusion gene. This region is highly conserved and essential for the kinase activity of the protein.\n- **Guide RNA 2** targets another critical region within the ABL1 segment, ensuring that both parts of the fusion gene are disrupted effectively.\n\n### Target 2: JAK2\n\n**Gene:** JAK2  \n**Reason:** While not as central as BCR-ABL1, mutations in JAK2 can contribute to CML and other hematological disorders. Targeting JAK2 could provide an additional therapeutic benefit.\n\n#### Guide RNA Sequence:\n- **Guide RNA:** `GAGGTCTAGGGTGCGCTAGT`\n\n**Explanation:**\n- JAK2 is a tyrosine kinase involved in signal transduction pathways. Mutations in JAK2 are known to enhance cellular proliferation and survival. The chosen guide RNA targets a highly conserved region within the kinase domain, which is crucial for its function.\n\n### Target 3: TP53\n\n**Gene:** TP53  \n**Reason:** TP53 is a tumor suppressor gene that plays a critical role in cell cycle regulation and apoptosis. Mutations in TP53 are common in many cancers, including CML. Restoring normal TP53 function can help control cancer cell growth.\n\n#### Guide RNA Sequence:\n- **Guide RNA:** `GGTGCAGTGTGCTGAGTGGT`\n\n**Explanation:**\n- TP53 is a key player in preventing cancer development by regulating cell cycle arrest and apoptosis. The guide RNA targets a region within the coding sequence of TP53, which is essential for its function as a transcription factor.\n\n### Target 4: CDK4\n\n**Gene:** CDK4  \n**Reason:** Cyclin-dependent kinases like CDK4 are involved in cell cycle regulation. Overexpression or activation of CDK4 can promote cell proliferation, making it a potential target for CML therapy",
+  "rag_response": "For treating chronic myeloid leukemia (CML), targeting the ABL1 gene is highly recommended due to its critical role in the disease. Here are the top guide RNA sequences for ABL1 based on the ML pipeline:\n\n1. **Guide RNA Sequence:** GGTTCATCATCATTCAACGG\n   - **PAM Site:** TGG\n   - **Position:** 1927 (28.68%)\n   - **Score:** 0.879\n   - **Efficiency:** This guide RNA has the highest score among those designed for ABL1, indicating high predicted efficiency. Its position within the gene also suggests it may be effective in disrupting the function of ABL1, which is essential for the survival and proliferation of CML cells.\n\n2. **Guide RNA Sequence:** GGGCCGAGACATCAGCAACG\n   - **PAM Site:** GGG\n   - **Position:** 3244 (48.28%)\n   - **Score:** 0.8178\n   - **Efficiency:** This guide RNA has a slightly lower score than the top one but still ranks second. Its position in the gene is also favorable, making it a strong candidate for disrupting ABL1 function.\n\n3. **Guide RNA Sequence:** AAGAATGGAAGCCTGAACTG\n   - **PAM Site:** AGG\n   - **Position:** 5143 (76.54%)\n   - **Score:** 0.8166\n   - **Efficiency:** This guide RNA has a good score and is positioned towards the end of the gene, which can be advantageous for disrupting the gene's function effectively.\n\n### Additional Considerations:\n- **BCR Gene:** While not as critical as ABL1, targeting the BCR gene could also be considered as part of a multi-gene approach. The ML pipeline does not provide specific guide RNAs for BCR, but the literature suggests that targeting both BCR and ABL1 genes could mimic the initial event in leukemogenesis, where the Philadelphia chromosome is formed by aberrant ligation between these two genes.\n  \n- **Other Genes:** While KIT, SETBP1, and PDGFRB are also associated with CML, the evidence for their direct involvement in the disease is less robust compared to ABL1. Therefore, focusing on ABL1 is the most strategic choice based on current knowledge and the available guide RNA data.\n\nIn summary, targeting ABL1 with the guide RNA sequences GGTTCATCATCATTCAACGG, GGGCCGAGACATCAGCAACG, and AAGAATGGAAGCCTGAACTG is highly recommended due to their high scores and positions within the gene, which are likely to result in efficient disruption of ABL",
+  "retrieved_chunks": [
+    "Title: CRISPR-Cas9 Technology as a Tool to Target Gene Drivers in Cancer: Proof of Concept and New Opportunities to Treat Chronic Myeloid Leukemia.\nAbstract: Chronic myeloid leukemia (CML) is a hematopoietic malignancy produced by a unique oncogenic event involving the constitutively active tyrosine-kinase (TK) BCR/ABL1. TK inhibitors (TKI) changed its prognosis and natural history. Unfortunately, ABL1 remains unaffected by TKIs. Leukemic stem cells (LSCs) remain, and resistant mutations arise during treatment. To address this problem, we have designed",
+    "Title: Creation of Philadelphia chromosome by CRISPR/Cas9-mediated double cleavages on BCR and ABL1 genes as a model for initial event in leukemogenesis.\nAbstract: The Philadelphia (Ph) chromosome was the first translocation identified in leukemia. It is supposed to be generated by aberrant ligation between two DNA double-strand breaks (DSBs) at the BCR gene located on chromosome 9q34 and the ABL1 gene located on chromosome 22q11. Thus, mimicking the initiation process of translocation, we induced CRISPR/Cas9-mediated DSBs simultaneously at the breakpoints o",
+    "Title: T315I mutation of BCR-ABL1 into human Philadelphia chromosome-positive leukemia cell lines by homologous recombination using the CRISPR/Cas9 system.\nAbstract: In many cancers, somatic mutations confer tumorigenesis and drug-resistance. The recently established clustered regularly interspaced short palindromic repeats (CRISPR)/Cas9 system is a potentially elegant approach to functionally evaluate mutations in cancers. To reproduce mutations by homologous recombination (HR), the HR pathway must be functional, but DNA damage repair is frequently impaired i",
+    "Title: A genome-scale CRISPR knock-out screen in chronic myeloid leukemia identifies novel drug resistance mechanisms along with intrinsic apoptosis and MAPK signaling.\nAbstract: Understanding resistance mechanisms in cancer is of utmost importance for the discovery of novel \"druggable\" targets. Efficient genetic screening, now even more possible with CRISPR-Cas9 gene-editing technology, next-generation sequencing and bioinformatics, is an important tool for deciphering novel cellular processes, such as resistance to treatment in cancer. Imatinib specifically eliminates ch",
+    "Title: The arginase inhibitor Nomega-hydroxy-nor-arginine (nor-NOHA) induces apoptosis in leukemic cells specifically under hypoxic conditions but CRISPR/Cas9 excludes arginase 2 (ARG2) as the functional target.\nAbstract: Cancer cells, including in chronic myeloid leukemia (CML), depend on the hypoxic response to persist in hosts and evade therapy. Accordingly, there is significant interest in drugging cancer-specific hypoxic responses. However, a major challenge in leukemia is identifying differential and druggable hypoxic responses between leukemic and normal cells. Previously, we found that arginase 2 (ARG2), an",
+    "Title: Specific High-Sensitivity Enzymatic Reporter UnLOCKing-Mediated Detection of Oncogenic BCR::ABL1 and EGFR Rearrangements.\nAbstract: Advances in molecular medicine have placed nucleic acid detection methods at the center of an increasing number of clinical applications. Polymerase chain reaction (PCR)-based diagnostics have been widely adopted for their versatility, specificity, and sensitivity. However, recently reported clustered regularly interspaced short palindromic repeats-based methods have demonstrated equivalent to sup"
+  ]
+}
