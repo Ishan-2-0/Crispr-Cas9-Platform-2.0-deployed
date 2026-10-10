@@ -156,10 +156,7 @@ def load_xgb():
 
 #llm via hf inference api providers tried in order
 MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
-PROVIDER_MODELS={
-    "featherless-ai":"Qwen/Qwen2.5-7B-Instruct",
-    "together":"Qwen/Qwen3.5-9B-Instruct",
-}
+PROVIDER_MODELS={"featherless-ai":"Qwen/Qwen2.5-7B-Instruct"}
 PROVIDERS=list(PROVIDER_MODELS.keys())
 def call_llm(prompt_text):
     messages=[
