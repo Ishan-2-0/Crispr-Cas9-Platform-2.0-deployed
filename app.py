@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from pathlib import Path
-from huggingface_hub import InferenceClient
+from groq import Groq
 
 #page setup
 st.set_page_config(
@@ -102,23 +102,19 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-#hf token
-HF_TOKEN = os.environ.get("HF_TOKEN")
-if not HF_TOKEN:
-    st.error("""HF_TOKEN not found.
-Running locally:
-    set HF_TOKEN=hf_your_token_here
-    streamlit run app.py
-Get a free token at https://hf.co/settings/tokens""")
+#groq api key
+GROQ_API_KEY=os.environ.get("GROQ_API_KEY","")
+if not GROQ_API_KEY:
+    st.error("GROQ_API_KEY not found. Add it to Streamlit secrets.")
     st.stop()
 
 #paths
-BASE_DIR = Path(__file__).parent
-MULTI_DIR = BASE_DIR / "multi_disease"
-PICKLE_PATH = BASE_DIR / "xgb_model.pkl"
+BASE_DIR=Path(__file__).parent
+MULTI_DIR=BASE_DIR / "multi_disease"
+PICKLE_PATH=BASE_DIR / "xgb_model.pkl"
 
 #frozen disease slugs
-GENE_OPTIONS = {
+GENE_OPTIONS={
     "HBB (Sickle Cell Anemia)":"HBB",
     "CCR5 (HIV Infection)":"CCR5",
     "HTT (Huntington's Disease)":"HTT",
@@ -154,38 +150,22 @@ def load_xgb():
     with open(PICKLE_PATH,"rb") as f:
         return pickle.load(f)
 
-#llm via hf inference api providers tried in order
-MODEL_ID = "Qwen/Qwen2.5-7B-Instruct"
-PROVIDER_MODELS={"featherless-ai":"Qwen/Qwen2.5-7B-Instruct"}
-PROVIDERS=list(PROVIDER_MODELS.keys())
+#llm via groq free with Qwen2.5 32B
 def call_llm(prompt_text):
-    messages=[
-        {"role":"system","content":(
-            "you are a CRISPR guide RNA design assistant. "
-            "use ONLY the retrieved context. copy guide sequences EXACTLY as given. "
-            "include exact xgboost scores. do not invent sequences or scores.")},
-        {"role":"user","content":prompt_text},
-    ]
-    last_err=""
-    for provider in PROVIDERS:
-        model_id=PROVIDER_MODELS.get(provider,MODEL_ID)
-        try:
-            client=InferenceClient(provider=provider,api_key=HF_TOKEN)
-            out=client.chat.completions.create(
-                model=model_id,
-                messages=messages,
-                max_tokens=500,
-                temperature=0.2,
-                top_p=0.9,
-            )
-            text=out.choices[0].message.content
-            if text and text.strip():
-                st.caption(f"llm provider:{provider}")
-                return text.strip()
-        except Exception as e:
-            last_err=f"[{provider}] {e}"
-            continue
-    raise RuntimeError(f"all providers failed. last:{last_err}")
+    client=Groq(api_key=GROQ_API_KEY)
+    out=client.chat.completions.create(
+        model="qwen-2.5-32b",
+        messages=[
+            {"role":"system","content":(
+                "you are a CRISPR guide RNA design assistant. "
+                "use ONLY the retrieved context. copy guide sequences EXACTLY as given. "
+                "include exact xgboost scores. do not invent sequences or scores.")},
+            {"role":"user","content":prompt_text},
+        ],
+        max_tokens=500,
+        temperature=0.2,
+    )
+    return out.choices[0].message.content.strip()
 
 #pubmed fetch: live/query,
 def fetch_pubmed(disease,gene,n=5):
