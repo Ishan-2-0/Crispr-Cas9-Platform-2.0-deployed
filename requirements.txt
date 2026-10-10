@@ -3,5 +3,5 @@ requests
 numpy
 pandas
 xgboost
-huggingface_hub
+groq
 biopython
