@@ -154,7 +154,7 @@ def load_xgb():
 def call_llm(prompt_text):
     client=Groq(api_key=GROQ_API_KEY)
     out=client.chat.completions.create(
-        model="qwen-2.5-32b",
+        model="qwen/qwen3.8-27b",
         messages=[
             {"role":"system","content":(
                 "you are a CRISPR guide RNA design assistant. "
